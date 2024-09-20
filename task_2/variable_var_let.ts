@@ -1,0 +1,41 @@
+var customer = "Vitali"; // var
+console.log(customer);
+
+let client = "Shell"; // let
+console.log(client);
+client = "Orlen"
+console.log(client);
+
+const SALARY = 1300; // const
+console.log(SALARY);
+
+let value = 100500;  // variable scope
+{
+    let value = "Error";
+    console.log(value); 
+}
+console.log("-------------------------------------");
+
+let isEnable: boolean = true; // boolean
+let isAlive: boolean = false;
+console.log(isAlive);
+console.log(isAlive);
+
+let age: number = 36;  // number
+console.log(age);
+
+let firstNime: string = "Vitali"; // string
+let secondNime: string = "Malatok";
+console.log(firstNime);
+console.log(secondNime);
+let info: string = `Name: ${firstNime}
+SecondName: ${secondNime}
+Age: ${age}`;
+console.log(info);
+
+
+
+
+
+
+
