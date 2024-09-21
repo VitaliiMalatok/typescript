@@ -33,6 +33,11 @@ SecondName: ${secondNime}
 Age: ${age}`;
 console.log(info);
 
+let firstVariable; // defined variable
+let secondVariable: boolean;
+firstVariable = "Hello World" // initialise variable
+secondVariable = true;
+
 
 
 
