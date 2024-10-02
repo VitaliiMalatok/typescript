@@ -40,6 +40,12 @@ secondVariable = true;
 
 //once you assign a value to a constant variable, you cannot change it later
 
+let email;
+console.log(email); // undefined
+email = null;
+console.log(email);     // null
+
+
 
 
 
