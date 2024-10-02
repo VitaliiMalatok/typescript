@@ -38,6 +38,8 @@ let secondVariable: boolean;
 firstVariable = "Hello World" // initialise variable
 secondVariable = true;
 
+//once you assign a value to a constant variable, you cannot change it later
+
 
 
 
