@@ -45,6 +45,8 @@ console.log(email); // undefined
 email = null;
 console.log(email);     // null
 
+// null and undefined are primitive types and can be used like other types, such as string
+
 
 
 
