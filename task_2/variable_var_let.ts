@@ -53,12 +53,10 @@ console.log(idUser);
 idUser = 1988;
 console.log(idUser);
 
-function printId(id: number|string){
+function printIdNumber(id: number|string){
     console.log(`Id: ${id}`);
-}
- 
+} 
 let id: string|number = "ruy74";
- 
 printId("1h2e3l4o5");
 printId(9876);
 printId(id);
