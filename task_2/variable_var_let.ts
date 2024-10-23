@@ -67,3 +67,7 @@ let user: id = 2;
 console.log(user);
 user = "dfsd"
 console.log(user);
+
+// type assertion, 
+const header = <HTMLElement>document.getElementById("header");
+header.innerText = "Hello Typescript!";
