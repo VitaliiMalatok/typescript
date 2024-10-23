@@ -57,6 +57,13 @@ function printIdNumber(id: number|string){
     console.log(`Id: ${id}`);
 } 
 let id: string|number = "ruy74";
-printId("1h2e3l4o5");
-printId(9876);
-printId(id);
+printIdNumber("1h2e3l4o5");
+printIdNumber(9876);
+printIdNumber(id);
+
+// type, allows you to combine several data types, an alias is used for this
+type id = string | number;
+let user: id = 2;
+console.log(user);
+user = "dfsd"
+console.log(user);
