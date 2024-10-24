@@ -97,3 +97,10 @@ console.log(a < b && b > a); // true
 7. undefined & 
 8. NaN.
 */
+
+console.log(!{}); // false
+
+// example ternary operator
+let movieReleased: boolean = true;
+let message: string = movieReleased ? "Movie is released" : "Not released yet";
+console.log(message);
