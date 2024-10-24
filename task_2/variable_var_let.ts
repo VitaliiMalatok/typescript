@@ -85,3 +85,15 @@ b = 6;
 console.log(a > b || a < b); // true
 console.log(a > b && a < b); // false
 console.log(a < b && b > a); // true
+
+// list of falsy values
+/*
+1. false, 
+2. 0 (zero), 
+3. -0 (minus zero) , 
+4. 0n (BigInt zero) , 
+5. " " (empty string), 
+6. null, 
+7. undefined & 
+8. NaN.
+*/
