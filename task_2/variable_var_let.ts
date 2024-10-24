@@ -68,6 +68,13 @@ console.log(user);
 user = "dfsd"
 console.log(user);
 
-// type assertion, 
-const header = <HTMLElement>document.getElementById("header");
-header.innerText = "Hello Typescript!";
+// type assertion 
+//const header = <HTMLElement>document.getElementById("header");
+//header.innerText = "Hello Typescript!";
+
+// strict and non-strict equals
+// the strict equality operator, returns false if the types are different.
+let a = 10;
+let b = 10;
+console.log(a == b);
+console.log(a === b);
