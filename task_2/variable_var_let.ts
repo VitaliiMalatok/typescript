@@ -104,3 +104,9 @@ console.log(!{}); // false
 let movieReleased: boolean = true;
 let message: string = movieReleased ? "Movie is released" : "Not released yet";
 console.log(message);
+
+// type conversion
+let c = "75";
+let d = 6;
+console.log(c + d);
+console.log(Number(c) + d);
