@@ -121,3 +121,13 @@ let list: number[] = [1, 3, 5, 9];
 console.log(list[0]);
 let listA: Array<number> = [1, 4, 6, 9];
 console.log(listA[3]);
+
+// get the max value which can be divided to 2: [5, 4, 6, 2, 7, 8, 9, 3]
+let maxValue: Array<number> = [5, 4, 6, 2, 7, 8, 9, 3];
+let max = maxValue[0];
+for(let i = 1; i < maxValue.length; i++){
+    if((maxValue[i] > max) && (maxValue[i] % 2 == 0)) {
+        max = maxValue[i];
+    }
+}
+console.log(max);
