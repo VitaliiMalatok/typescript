@@ -110,3 +110,8 @@ let c = "75";
 let d = 6;
 console.log(c + d);
 console.log(Number(c) + d);
+
+// how to get the type of primitives
+let myVar = 42;
+let myVarType = typeof myVar;
+console.log(myVarType);
