@@ -115,3 +115,9 @@ console.log(Number(c) + d);
 let myVar = 42;
 let myVarType = typeof myVar;
 console.log(myVarType);
+
+// give example of array
+let list: number[] = [1, 3, 5, 9];
+console.log(list[0]);
+let listA: Array<number> = [1, 4, 6, 9];
+console.log(listA[3]);
