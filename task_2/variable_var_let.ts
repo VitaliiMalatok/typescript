@@ -131,3 +131,11 @@ for(let i = 1; i < maxValue.length; i++){
     }
 }
 console.log(max);
+
+// The difference between == & === does a type conversion before checking for equality
+let x = "10";
+let y = 10;
+console.log(x == y); // true
+console.log(x === y);  // false
+// the strict equality operator, returns false if the types are different.
+
