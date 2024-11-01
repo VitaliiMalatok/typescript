@@ -139,3 +139,16 @@ console.log(x == y); // true
 console.log(x === y);  // false
 // the strict equality operator, returns false if the types are different.
 
+// example and explanation of ? and ??
+//ternary operation ?
+const firstOperand = 1;
+const secondOperand = 2;
+const result = firstOperand < secondOperand ? firstOperand: secondOperand; // if the condition is true, the return the second operand
+console.log(result); // 1
+
+// operator ?? (nullish coalescing operator)
+// this operator allows you to check the value for null and undefined
+let firstResult = "hello" ?? "world";
+console.log(firstResult); // hello, the operator return value of left operand if there not equal null or undefined
+console.log(null ?? "not null");    // not null
+console.log(undefined ?? "defined");    // defined
