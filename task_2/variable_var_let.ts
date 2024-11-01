@@ -152,3 +152,17 @@ let firstResult = "hello" ?? "world";
 console.log(firstResult); // hello, the operator return value of left operand if there not equal null or undefined
 console.log(null ?? "not null");    // not null
 console.log(undefined ?? "defined");    // defined
+
+// cycle for in and for of
+// for in designed for searching objects or arrays
+const person = {name: "Tom", age: 37};
+for(let prop in person){
+      
+    console.log(prop + person[prop]);
+}
+
+// for of you can use for searching arrays
+let myArray = maxValue;
+for(let number of myArray){
+    console.log(number);
+}
