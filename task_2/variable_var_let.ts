@@ -166,3 +166,7 @@ let myArray = maxValue;
 for(let number of myArray){
     console.log(number);
 }
+
+// type example second case
+const header = document.getElementById("header") as HTMLElement;
+header.innerText = "Hello Typescript!";
