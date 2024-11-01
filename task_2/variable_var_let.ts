@@ -53,7 +53,7 @@ console.log(idUser);
 idUser = 1988;
 console.log(idUser);
 
-function printIdNumber(id: number|string){
+function printIdNumber (id: number|string) : void {
     console.log(`Id: ${id}`);
 } 
 let id: string|number = "ruy74";
@@ -168,5 +168,47 @@ for(let number of myArray){
 }
 
 // type example second case
-const header = document.getElementById("header") as HTMLElement;
-header.innerText = "Hello Typescript!";
+//const header = document.getElementById("header") as HTMLElement;
+//header.innerText = "Hello Typescript!";
+
+// how to use falsy valuse
+/*
+false
+0
+NaN (the "not a number" value)
+"" (empty string)
+[] (empty array)
+null
+undefined
+*/
+// false
+let isOnline = false;
+function checkStatus(status) {
+  return Boolean(status) ? "ONLINE" : "OFFLINE";
+}
+checkStatus(isOnline); // "OFFLINE"
+
+// 0
+let unreadMessages = 0;
+let hasUnreadMessages = Boolean(unreadMessages);
+console.log(hasUnreadMessages) ;// false
+
+// ""
+let userInput = "";
+let defaultText = "No input provided";
+let displayText = Boolean(userInput) || defaultText;
+console.log(displayText); // No input provided
+
+// null
+let user1 = null;
+if (user1 && user1.name) {
+    console.log("Welcome, " + user1.name + "!");
+} else {
+    console.log("Please log in to access the website.");
+}
+
+// undefined
+let age1;
+if (age1 === undefined) {
+    console.log("The age is undefined.");
+}
