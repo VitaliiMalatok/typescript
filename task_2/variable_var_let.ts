@@ -9,23 +9,23 @@ console.log(client);
 const SALARY = 1300; // const
 console.log(SALARY);
 
-let value = 100500;  // variable scope
+const value = 100500;  // variable scope
 {
     let value = "Error";
     console.log(value); 
 }
 console.log("-------------------------------------");
 
-let isEnable: boolean = true; // boolean
-let isAlive: boolean = false;
+const isEnable = true; // boolean
+const isAlive = false;
 console.log(isAlive);
 console.log(isAlive);
 
-let age: number = 36;  // number
+const age = 36;  // number
 console.log(age);
 
-let firstNime: string = "Vitali"; // string
-let secondNime: string = "Malatok";
+const firstNime = "Vitali"; // string
+const secondNime = "Malatok";
 console.log(firstNime);
 console.log(secondNime);
 let info: string = `Name: ${firstNime}
@@ -33,17 +33,18 @@ SecondName: ${secondNime}
 Age: ${age}`;
 console.log(info);
 
-let firstVariable; // defined variable
+let firstVariable: string; // defined variable
 let secondVariable: boolean;
 firstVariable = "Hello World" // initialise variable
 secondVariable = true;
 
 //once you assign a value to a constant variable, you cannot change it later
 
-let email;
+let email: string;
 console.log(email); // undefined
-email = null;
-console.log(email);     // null
+const email1: string;
+email1 = null;
+console.log(email1); // null
 
 // null and undefined are primitive types and can be used like other types, such as string
 
@@ -56,7 +57,7 @@ console.log(idUser);
 function printIdNumber (id: number|string) : void {
     console.log(`Id: ${id}`);
 } 
-let id: string|number = "ruy74";
+const id = "ruy74";
 printIdNumber("1h2e3l4o5");
 printIdNumber(9876);
 printIdNumber(id);
@@ -74,17 +75,17 @@ console.log(user);
 
 // strict and non-strict equals
 // the strict equality operator, returns false if the types are different.
-let a = 10;
-let b = 10;
+const a = 10;
+const b = 10;
 console.log(a == b);
 console.log(a === b);
 
 // example && and ||
-a = 5;
-b = 6;
-console.log(a > b || a < b); // true
-console.log(a > b && a < b); // false
-console.log(a < b && b > a); // true
+const g = 5;
+const h = 6;
+console.log(g > h || g < h); // true
+console.log(g > h && g < h); // false
+console.log(g < h && h > g); // true
 
 // list of falsy values
 /*
@@ -101,29 +102,29 @@ console.log(a < b && b > a); // true
 console.log(!{}); // false
 
 // example ternary operator
-let movieReleased: boolean = true;
+const movieReleased = true;
 let message: string = movieReleased ? "Movie is released" : "Not released yet";
 console.log(message);
 
 // type conversion
-let c = "75";
-let d = 6;
+const c = "75";
+const d = 6;
 console.log(c + d);
 console.log(Number(c) + d);
 
 // how to get the type of primitives
-let myVar = 42;
+const myVar = 42;
 let myVarType = typeof myVar;
 console.log(myVarType);
 
 // give example of array
-let list: number[] = [1, 3, 5, 9];
+const list: number[] = [1, 3, 5, 9];
 console.log(list[0]);
-let listA: Array<number> = [1, 4, 6, 9];
+const listA: Array<number> = [1, 4, 6, 9];
 console.log(listA[3]);
 
 // get the max value which can be divided to 2: [5, 4, 6, 2, 7, 8, 9, 3]
-let maxValue: Array<number> = [5, 4, 6, 2, 7, 8, 9, 3];
+const maxValue: Array<number> = [5, 4, 6, 2, 7, 8, 9, 3];
 let max = maxValue[0];
 for(let i = 1; i < maxValue.length; i++){
     if((maxValue[i] > max) && (maxValue[i] % 2 == 0)) {
@@ -133,8 +134,8 @@ for(let i = 1; i < maxValue.length; i++){
 console.log(max);
 
 // The difference between == & === does a type conversion before checking for equality
-let x = "10";
-let y = 10;
+const x = "10";
+const y = 10;
 console.log(x == y); // true
 console.log(x === y);  // false
 // the strict equality operator, returns false if the types are different.
@@ -162,7 +163,7 @@ for(let prop in person){
 }
 
 // for of you can use for searching arrays
-let myArray = maxValue;
+const myArray = maxValue;
 for(let number of myArray){
     console.log(number);
 }
@@ -182,25 +183,30 @@ null
 undefined
 */
 // false
-let isOnline = false;
-function checkStatus(status) {
+const isOnline = false;
+function checkStatus(status): string {
   return Boolean(status) ? "ONLINE" : "OFFLINE";
 }
 checkStatus(isOnline); // "OFFLINE"
 
 // 0
-let unreadMessages = 0;
-let hasUnreadMessages = Boolean(unreadMessages);
+const unreadMessages = 0;
+const hasUnreadMessages = Boolean(unreadMessages);
 console.log(hasUnreadMessages) ;// false
 
 // ""
-let userInput = "";
-let defaultText = "No input provided";
+const userInput = "";
+const defaultText = "No input provided";
 let displayText = Boolean(userInput) || defaultText;
 console.log(displayText); // No input provided
+/*
+This example uses the logical OR operator || to determine the value of the displayText. 
+It will assign the value of userInput to displayText if it's a truthy value. Or it will 
+assign the defaultText to displayText if userInput is a falsy value as it is in this case.
+*/
 
 // null
-let user1 = null;
+const user1 = null;
 if (user1 && user1.name) {
     console.log("Welcome, " + user1.name + "!");
 } else {
@@ -208,19 +214,25 @@ if (user1 && user1.name) {
 }
 
 // undefined
-let age1;
+let age1: number;
 if (age1 === undefined) {
     console.log("The age is undefined.");
 }
+/*
+When a variable is declared but not initialized with a value, JavaScript 
+assigns it the value undefined by default. In the code example above, since 
+the age variable is declared but not assigned a value, its value is undefined. 
+This means the code in the if statement will run.
+*/
 
 //
 type Person = {name: string; age: number};
-// расширяем псевдоним Person
+// 
 type Employee = Person & {company: string};
-let tom: Person = {name: "Tom", age: 36};
-let bob: Employee = {name: "Bob", age: 41, company: "Microsoft"};
-function printPerson(user: Person){
+const tom: Person = {name: "Tom", age: 36};
+const bob: Employee = {name: "Bob", age: 41, company: "Microsoft"};
+function printPerson(user: Person) : void {
     console.log(`Name: ${user.name}  Age: ${user.age}`);
 }
 printPerson(tom);
-printPerson(bob);  // bob представляет Employee, но он также соответствует псевдониму Person
+printPerson(bob);  
