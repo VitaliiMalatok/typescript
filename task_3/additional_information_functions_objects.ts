@@ -29,3 +29,38 @@ let userId = function(fistName: string, secondName: string, ...otherParam): stri
 }
 console.log(userId("Vitali", "Malatok", "date of bith", "last name")); // [ 'date of bith', 'last name' ]
 
+// object
+// a variable to which an object is assigned does not 3store the object itself, but a reference to its address in memory
+// when copying an object, the reference is copied, not the object itself
+const userVitali = {name: "Vitali"};
+const admin = userVitali; // the reference is copied
+
+// two object are equal if they are the same object
+const a = {};
+const b = a;
+console.log(a == b); // true, two varianble are referense the same object
+console.log(a === b); // true
+
+const c = {};
+const d = {};
+console.log(c ==d); // false, becouse are they two independent object
+
+// clone object
+const user2 = {
+    name: "Vitali",
+    age: 36
+};
+const clone = Object.assign({}, user2); // we are clone property to the new empty object
+console.log(clone); // { name: 'Vitali', age: 36 }
+
+// metod structuredClone(), deep copy
+let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+const clone1 = structuredClone(user)
+console.log(clone1); // { name: 'John', sizes: { height: 182, width: 50 } }
+
